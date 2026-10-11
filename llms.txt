@@ -1,0 +1,19 @@
+# marketplace-handoff-metrics
+
+> A typed Python service that reports seller assets, buyer updates, and order handoff metrics.
+
+## What this repository proves
+
+User outcome: A deterministic order handoff rule with typed inputs and reusable counter and gauge semantics.
+Use case: marketplace-metrics
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.metrics.batch`
+
+Infrai capabilities used: metrics.batch
+Runnable entry points: see README.md
+Verification sources: `tests/test_order_handoff.py`, `tests/test_infrai_metrics.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

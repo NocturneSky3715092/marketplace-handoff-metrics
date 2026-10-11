@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketplace-handoff-metrics"
+version = "0.1.0"
+description = "A typed Python service that reports seller, buyer, and order handoff metrics."
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115", "pydantic>=2.8", "uvicorn>=0.30"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+py-modules = ["infrai_metrics", "marketplace_metrics", "order_handoff_service"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
